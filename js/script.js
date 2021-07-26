@@ -104,7 +104,7 @@ if (typeof(Storage) !== "undefined") {
         document.write("<h3>Ainda não há nenhum cliente cadastrado!</h3>");
     else {
 
-        produts = JSON.parse(products)
+        products = JSON.parse(products)
         products.forEach(product => {
           document.write('<ul>')
           document.write(`<li>Código: ${product.idProduct}</li>`)
