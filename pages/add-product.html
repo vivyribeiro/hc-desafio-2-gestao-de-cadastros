@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../favicon.ico" />
+    <title>GECOM - Produtos</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="/assets/icons/style.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header id="header">
+      <a class="logo" href="#">
+        <img src="/assets/logo.png" alt="Logo GECOM" />
+      </a>
+    </header>
+
+    <!-- Side navigation -->
+    <nav class="side-nav">
+      <div class="icons-bar">
+        <a href="/index.html">
+          <i class="icon-home" title="Painel"></i>
+        </a>
+        <a href="/pages/product.html">
+          <i class="icon-users" title="Clientes"></i>
+        </a>
+        <a href="/pages/product.html">
+          <i class="icon-shopping_cart" title="Produtos"></i>
+        </a>
+        <a href="/pages/services.html">
+          <i class="icon-home_repair_service" title="Serviços"></i>
+        </a>
+        <a href="/pages/suppliers.html">
+          <i class="icon-shipping" title="Fornecedores"></i>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section" id="products">
+          <div class="form-products" id="form-products">
+            <div class="form-container">
+              <div class="form-header">
+                <h2>Novo Produto</h2>
+                <button type="button" class="close-button" id="close-button">X</button>
+              </div>
+              <form class="form title" id="form">
+                <input
+                  id="product-id"
+                  data-index="new"
+                  type="number"
+                  class="form-field"
+                  placeholder="Código"
+                  required=""
+                />
+                <input
+                  id="product-name"
+                  type="text"
+                  class="form-field"
+                  placeholder="Nome do Produto"
+                  required=""
+                />
+                <input
+                  id="product-brand"
+                  type="text"
+                  class="form-field"
+                  placeholder="Marca"
+                  required=""
+                />
+                <input
+                  id="product-quantity"
+                  type="number"
+                  class="form-field"
+                  placeholder="Quantidade"
+                  required=""
+                />
+                <input
+                  id="product-price"
+                  type="number"
+                  class="form-field"
+                  placeholder="Preço"
+                  required=""
+                />
+                  <div class="form-buttons" >
+                    <input type="submit" id="btn-save" class="button-save" value="Salvar" onclick="validationProduts('product-id', 'product-name', 'product-brand', 'product-price', 'product-quantity')"/>
+                    <input type="button" id="btn-cancel" class="button-cancel" value="Cancelar" onclick="closeModal()"/>
+                  </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

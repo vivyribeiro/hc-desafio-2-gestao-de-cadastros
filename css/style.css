@@ -1,0 +1,346 @@
+/*====  RESET ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*====  VARIABLES ============================ */
+
+:root {
+  --header-height: 3rem;
+  /* colors */
+  --hue: 228;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 100% 13%);
+  --base-color-second: hsl(var(--hue) 74% 59%);
+  --base-color-alt: hsl(var(--hue) 47% 53% /0.34);
+  --title-color: hsl(0 0% 100%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-alt: hsl(0 0% 78%);
+  --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.25rem;
+  --subtitle-font-size: 1rem;
+  --family-font: 'Maven Pro', sans-serif;
+}
+
+/*===  BASE ============================ 
+body{
+  height: fit-content;
+}
+
+main {
+  margin-left: 6rem;
+  padding: 0px 10px;
+}*/
+
+.title {
+  font: 700 var(--title-font-size) var(--family-font);
+  -webkit-font-smoothing: auto;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font: 700 var(--subtitle-font-size) var(--family-font);
+  margin-bottom: 0.5rem;
+}
+
+/*====  LAYOUT ============================ */
+.container {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.section {
+  margin-left: 4.375rem;
+  padding: calc(2.5rem + var(--header-height)) 0;
+}
+
+.section header {
+  margin-bottom: 4rem;
+}
+/*====  HEADER ============================ */
+#header {
+  width: 100%;
+  height: var(--header-height);
+  border-bottom: 2px solid var(--base-color-second);
+  margin-bottom: 2rem;
+  background-color: var(--base-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 7.5rem;
+  padding: 0.5rem;
+  margin-left: 5rem;
+}
+
+/*===  SIDEBAR NAVEGAÇÂO ============================ */
+/*h1 {
+  color: var(--title-color);
+  text-align: center;
+  border-bottom: 2px solid var(--base-color-alt);
+  margin-top: 1rem;
+}
+*/
+
+.side-nav {
+  height: 100%;
+  width: 3.75rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--base-color);
+  overflow-x: hidden;
+  margin-top: var(--header-height);
+}
+
+.icons-bar a {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  color: var(--title-color);
+  font-size: 2rem;
+  border-bottom: 2px solid var(--base-color-alt);
+}
+
+.icons-bar a:hover {
+  background-color: var(--base-color-second);
+}
+
+.icons-bar a.active {
+  background-color: var(--base-color-second);
+}
+
+/*===  SECTION DASHBOARD ============================ 
+#dashboard .container {
+  text-align: center;
+}
+
+.info-dashboard {
+  user-select: none;
+}
+
+.registers {
+  display: inline-flex;
+  width: 14rem;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0.5rem 0;
+}*/
+
+/*===  SECTION DASHBOARD ============================ 
+#dashboard-two {
+  background-color: var(--body-color-alt);
+}*/
+.cards-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+#dashboard .card {
+  padding-bottom: 1.5rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+#dashboard h1 {
+  background-color: var(--base-color);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+#dashboard .card h2 {
+  background-color: var(--base-color-second);
+  color: var(--title-color);
+  text-align: center;
+}
+
+#dashboard .card h3 {
+  user-select: none;
+}
+
+.add-button-dashboard {
+  height: 2rem;
+  width: 100%;
+  font-size: var(--title-font-size);
+  color: var(--title-color);
+  background-color: var(--base-color-second);
+  cursor: pointer;
+}
+
+/*===  SECTION CLIENTS ============================ */
+
+/*===  SECTION PRODUCTS ============================ */
+#table-products {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#products h1 {
+  text-align: center;
+  border: 2px solid var(--base-color);
+  color: var(--base-color);
+}
+
+.data-recorded {
+  width: 100%;
+  user-select: none;
+  text-align: left;
+}
+
+th {
+  height: 2.5rem;
+  padding: 0.5rem;
+  font-size: var(--title-font-size);
+  background-color: var(--base-color);
+  color: var(--title-color);
+}
+
+.modal {
+  position: fixed;
+  top: 18rem;
+  /*left: 0;*/
+  width: 100%;
+  height: 100%;
+  /*background: rgba(0, 0, 0, 0.090);*/
+  color: var(--title-color);
+  opacity: 1;
+  z-index: -1;
+  text-align: center;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 71%;
+
+  padding-bottom: 1.25rem;
+  background-color: var(--title-color);
+  box-shadow: 1px 1px 10px var(--base-color);
+}
+
+.modal-header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: var(--subtitle-font-size);
+  font-family: var(--family-font);
+  background-color: var(--base-color);
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--base-color);
+  color: var(--title-color);
+  border-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close-button:hover {
+  background-color: red;
+}
+
+.modal-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.modal-form input {
+  width: 100%;
+  height: 2.25rem;
+  outline-style: none;
+  border-style: none;
+  box-shadow: 0 0 2px black;
+  padding: 0 0.625rem;
+  font-size: 1rem;
+}
+
+.add-button {
+  height: 2.5rem;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--base-color);
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: var(--base-color-second);
+}
+
+#add-product {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-form {
+  display: flex;
+  /*justify-content: space-between; */
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 0 1.25rem;
+}
+
+.modal-buttons {
+  text-align: center;
+  padding: 0 1.25rem;
+}
+
+.button-save {
+  height: 2.5rem;
+  padding: 0.375rem 0.75rem;
+  margin-right: 1rem;
+  background-color: var(--base-color);
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.button-save:hover {
+  background-color: green;
+  border: 2px solid var(--base-color);
+}
+
+.button-cancel {
+  height: 2.5rem;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--base-color);
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.button-cancel:hover {
+  background-color: red;
+  border: 2px solid var(--base-color);
+}
+
+/*===  SECTION SERVICES ============================ */
+
+/*===  SECTION SUPPLIERS ============================ */
