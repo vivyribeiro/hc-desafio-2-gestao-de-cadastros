@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../favicon.ico" />
-    <title>GECOM - Produtos</title>
-
+    <title>GECOM - Cadastro de Produtos</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    
     <!-- Icons -->
     <link rel="stylesheet" href="/assets/icons/style.css" />
     <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
   </head>
+
   <body>
     <header id="header">
       <a class="logo" href="#">
@@ -28,46 +33,28 @@
         <a href="/index.html">
           <i class="icon-home" title="Painel"></i>
         </a>
-        <a href="/pages/product.html">
+        <a href="/pages/add-clients.html">
           <i class="icon-users" title="Clientes"></i>
         </a>
-        <a href="/pages/product.html">
+        <a href="/pages/add-products.html">
           <i class="icon-shopping_cart" title="Produtos"></i>
         </a>
-        <a href="/pages/services.html">
+        <a href="#add-services">
           <i class="icon-home_repair_service" title="Serviços"></i>
         </a>
-        <a href="/pages/suppliers.html">
+        <a href="#add-suppliers">
           <i class="icon-shipping" title="Fornecedores"></i>
         </a>
       </div>
     </nav>
-
+    <!-- Home -->
     <main>
       <section class="section" id="products">
         <div class="container">
-          <h1 class="title" >Produtos Cadastrados</h1>
-          <table id="table-products" class="data-recorded title">
-            <thead>
-              <tr>
-                <th>Cód.</th>
-                <th>Nome</th>
-                <th>Marca</th>
-                <th>Preço</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <div id="add-product">
-            <button type="button" class="add-button title">
-                Adicionar Novo Produto
-            </button>
-          </div>
           <div class="modal" id="modal-products">
             <div class="modal-container">
               <div class="modal-header">
-                <h2>Novo Produto</h2>
-                <button type="button" class="close-button" id="close-button">X</button>
+                <h2>Cadastrar Novo Produto</h2>
               </div>
               <form class="modal-form title" id="form">
                 <input
@@ -106,18 +93,29 @@
                   placeholder="Preço"
                   required=""
                 />
-                  <div class="modal-buttons" >
-                    <input type="submit" id="btn-save" class="button-save" value="Salvar" onclick="validationProduts('product-id', 'product-name', 'product-brand', 'product-price', 'product-quantity')"/>
-                    <input type="button" id="btn-cancel" class="button-cancel" value="Cancelar" onclick="closeModal()"/>
-                  </div>
+                <div class="modal-buttons">
+                  <input
+                    type="submit"
+                    id="btn-save"
+                    class="button-save"
+                    value="Salvar"
+                    onclick="validationProducts()"
+                  />
+                  <input
+                    type="submit"
+                    id="btn-registers-products"
+                    class="button-registers"
+                    value="Ver cadastros"
+                    onclick="listProducts()"
+                  />
+                </div>
               </form>
             </div>
           </div>
-
         </div>
       </section>
     </main>
-
-    <script src="/js/script.js"></script>
+  
+   <script src="../js/script.js"></script>
   </body>
 </html>

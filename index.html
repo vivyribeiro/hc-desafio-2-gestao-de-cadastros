@@ -4,18 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>HC Desafio 2 - Gestão de Cadastros</title>
 
     <!-- Icons -->
-    <link rel="stylesheet" href="assets/icons/style.css" />
+    <link rel="stylesheet" href="/assets/icons/style.css" />
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="header">
       <a class="logo" href="#">
-        <img src="assets/logo.png" alt="Logo GECOM" />
+        <img src="/assets/logo.png" alt="Logo GECOM" />
       </a>
     </header>
 
@@ -25,53 +32,82 @@
         <a href="#">
           <i class="icon-home" title="Painel"></i>
         </a>
-        <a href="/pages/clients.html">
-          <i class="icon-users"title="Clientes"></i>
+        <a href="/pages/add-clients.html">
+          <i class="icon-users" title="Clientes"></i>
         </a>
-        <a href="/pages/add-product.html">
+        <a href="/pages/add-products.html">
           <i class="icon-shopping_cart" title="Produtos"></i>
         </a>
-        <a href="/pages/services.html">
+        <a href="#add-services">
           <i class="icon-home_repair_service" title="Serviços"></i>
         </a>
-        <a href="/pages/suppliers.html">
+        <a href="#add-suppliers">
           <i class="icon-shipping" title="Fornecedores"></i>
         </a>
       </div>
     </nav>
-
+    <!-- Home -->
     <main>
       <section class="section" id="dashboard">
         <div class="container">
-          <div>
-            <h1>Painel de Cadastros</h1>
-          </div>
-          <div class="cards-grid">
-            <div class="card">
-              <h2 class="title" id="clients">Clientes</h2>   
-              <h3 class="title">0</h3> 
-              <a href=""><button type="button" class="add-button-dashboard">Adicionar</button></a>
+          <div class="dashboard-container">
+            <div>
+              <h1>Painel de Cadastros</h1>
             </div>
-            <div class="card">
-              <h2 class="title" id="products">Produtos</h2>
-              <h3 class="title">0</h3>
-              <a href=""><button type="button" class="add-button-dashboard">Adicionar</button></a>  
-            </div>
-            <div class="card">              
-              <h2 class="title" id="services">Serviços</h2>  
-              <h3 class="title">0</h3>
-              <a href=""><button type="button" class="add-button-dashboard">Adicionar</button></a>
-            </div>
-            <div class="card">              
-              <h2 class="title" id="suppliers">Fornecedores</h2>
-              <h3 class="title">0</h3>
-              <a href=""><button type="button" class="add-button-dashboard">Adicionar</button></a>
+            <div class="cards-grid">
+              <div class="card icon-cards">
+                <h2 class="title" id="clients">Clientes</h2>
+                <a href="/pages/clients.html">
+                  <i class="icon-users" title="Clientes"></i>
+                </a>
+                <a href="/pages/add-clients.html"
+                  ><button
+                    type="button"
+                    class="add-button-dashboard"
+                    id="add-button-client"
+                  >
+                    Adicionar
+                  </button></a
+                >
+              </div>
+              <div class="card icon-cards">
+                <h2 class="title" id="products">Produtos</h2>
+                <a href="/pages/products.html">
+                  <i class="icon-shopping_cart" title="Produtos"></i>
+                </a>
+                <a href="/pages/add-products.html"
+                  ><button type="button" class="add-button-dashboard">
+                    Adicionar
+                  </button></a
+                >
+              </div>
+              <div class="card icon-cards">
+                <h2 class="title" id="services">Serviços</h2>
+                <a href="#">
+                  <i class="icon-home_repair_service" title="Serviços"></i>
+                </a>
+                <a href="#add-services"
+                  ><button type="button" class="add-button-dashboard">
+                    Adicionar
+                  </button></a
+                >
+              </div>
+              <div class="card icon-cards">
+                <h2 class="title" id="suppliers">Fornecedores</h2>
+                <a href="#">
+                  <i class="icon-shipping" title="Fornecedores"></i>
+                </a>
+                <a href="#add-suppliers"
+                  ><button type="button" class="add-button-dashboard">
+                    Adicionar
+                  </button></a
+                >
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

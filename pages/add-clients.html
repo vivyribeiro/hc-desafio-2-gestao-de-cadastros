@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GECOM - Cadastro de Clientes</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="/assets/icons/style.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <a class="logo" href="#">
+        <img src="/assets/logo.png" alt="Logo GECOM" />
+      </a>
+    </header>
+
+    <!-- Side navigation -->
+    <nav class="side-nav">
+      <div class="icons-bar">
+        <a href="/index.html">
+          <i class="icon-home" title="Painel"></i>
+        </a>
+        <a href="/pages/add-clients.html">
+          <i class="icon-users" title="Clientes"></i>
+        </a>
+        <a href="/pages/add-products.html">
+          <i class="icon-shopping_cart" title="Produtos"></i>
+        </a>
+        <a href="#add-services">
+          <i class="icon-home_repair_service" title="Serviços"></i>
+        </a>
+        <a href="#add-suppliers">
+          <i class="icon-shipping" title="Fornecedores"></i>
+        </a>
+      </div>
+    </nav>
+    <!-- Home -->
+    <main>
+      <section class="section" id="clients">
+        <div class="container">
+          <div class="modal" id="modal-clients">
+            <div class="modal-container">
+              <div class="modal-header">
+                <h2>Cadastrar Novo Cliente</h2>
+              </div>
+              <form class="modal-form title" id="form">
+                <input
+                  id="name-client"
+                  type="text"
+                  class="modal-field"
+                  placeholder="Nome Completo"
+                  required=""
+                />
+                <input
+                  id="email-client"
+                  type="text"
+                  class="modal-field"
+                  placeholder="E-mail"
+                  required=""
+                />
+                <input
+                  id="phone-client"
+                  type="tel"
+                  class="modal-field"
+                  placeholder="Celular"
+                  required=""
+                />
+                <input
+                  id="address-client"
+                  type="text"
+                  class="modal-field"
+                  placeholder="Endereço Completo"
+                  required=""
+                />
+                <input
+                  id="city-client"
+                  type="text"
+                  class="modal-field"
+                  placeholder="Cidade"
+                  required=""
+                />
+                <input
+                  id="state-client"
+                  type="text"
+                  class="modal-field"
+                  placeholder="Estado"
+                  required=""
+                />
+                <div class="modal-buttons">
+                  <input
+                    type="submit"
+                    id="btn-save"
+                    class="button-save"
+                    value="Salvar"
+                    onclick="validationClients()"
+                  />
+                  <input
+                    type="submit"
+                    id="btn-registers-cliente"
+                    class="button-registers"
+                    value="Ver cadastros"
+                    onclick="listClients()"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
